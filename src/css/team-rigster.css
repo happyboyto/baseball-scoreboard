@@ -1,0 +1,66 @@
+section.left {
+    width : 30%;
+    float: left;
+    width : 400px;
+}
+
+section.right {
+    width : 60%;
+    float: right;
+}
+
+
+.circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+.sbo-text {
+    margin: 10px;
+    font-size: x-large;
+}
+
+.strike {
+    background-color:#E5D41A;
+}
+
+.ball {
+    background-color: green;
+}
+
+.out {
+    background-color: red;
+}
+#sbo-display {
+    margin-top: 20px;
+}
+
+.circle-wrapper {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    
+}
+
+#sbo-display {
+    border: 1px;
+}
+
+table {
+    border : 10px;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+.total-state {
+    display: flex;
+    align-items: center;
+}
+
+.total-state p {
+    margin-left: 50px;
+}

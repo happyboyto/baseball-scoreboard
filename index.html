@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/team-rigster.css" />
+    <script src="./src/js/register.js" type="module"></script>
+    <title>Scoreboard</title>
+  </head>
+  <body>
+    <section class="left" id="register-team-section">
+      <h1>Register New Team</h1>
+      <fieldset>
+        <form id="register-team-form">
+          팀 이름 :
+          <input
+            type="text"
+            id="team-name"
+            required
+            placeholder="Team Name"
+          /><br />
+          투수 이름 :
+          <input
+            type="text"
+            id="pitcher-name"
+            required
+            placeholder="Pitcher Name"
+          /><br />
+          1번 타자 :
+          <input
+            type="text"
+            id="batter1-name"
+            required
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter1-avg"
+            required
+            placeholder="AVG."
+            size="5"
+          /><br />
+          2번 타자 :
+          <input
+            type="text"
+            id="batter2-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter2-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          3번 타자 :
+          <input
+            type="text"
+            id="batter3-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter3-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          4번 타자 :
+          <input
+            type="text"
+            id="batter4-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter4-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          5번 타자 :
+          <input
+            type="text"
+            id="batter5-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter5-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          6번 타자 :
+          <input
+            type="text"
+            id="batter6-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter6-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          7번 타자 :
+          <input
+            type="text"
+            id="batter7-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter7-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          8번 타자 :
+          <input
+            type="text"
+            id="batter8-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter8-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          9번 타자 :
+          <input
+            type="text"
+            id="batter9-name"
+            placeholder="Batter Name"
+          />&nbsp;&nbsp;<input
+            type="text"
+            id="batter9-avg"
+            placeholder="AVG."
+            size="5"
+          /><br />
+          <input type="submit" value="Register" />
+        </form>
+      </fieldset>
+      <div id="registered-team">
+        <h1>Registered Team</h1>
+        <fieldset>
+          <label>팀 정보를 보려면 팀 이름을 클릭하세요</label>
+          <ul id="registered-team-list"></ul>
+        </fieldset>
+        <h1>Team Information</h1>
+        <fieldset>
+          <div id="team-info-displaybox"></div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="right" id="game">
+      <h1>Score Board</h1>
+      <table border="1" id="scoreboard">
+        <thead>
+          <tr align="center" id="scoreboard-head">
+            <td></td>
+            <td>점수 합</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr align="center" id="top-team-info">
+            <td id="top-team-name">선공 팀</td>
+            <td id="top-team-score">0</td>
+          </tr>
+          <tr align="center" id="bottom-team-info">
+            <td id="bottom-team-name">후공 팀</td>
+            <td id="bottom-team-score">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="state-message">
+        <div id="curr-player">
+          현재 투수:
+          <div id="pitcher-info"></div>
+          현재 타자:
+          <div id="batter-info"></div>
+        </div>
+      </div>
+
+      <div id="sbo-display">
+        <p id="curr-ball-result-message"></p>
+        <div class="sbo-text">S</div>
+        <div class="circle-wrapper" id="strike-display">
+          <div class="circle strike hidden" id="strike1"></div>
+          <div class="circle strike hidden" id="strike2"></div>
+          <div class="circle strike hidden" id="strike3"></div>
+        </div>
+        <div class="sbo-text">B</div>
+        <div class="circle-wrapper" id="ball-display">
+          <div class="circle ball hidden" id="ball1"></div>
+          <div class="circle ball hidden" id="ball2"></div>
+          <div class="circle ball hidden" id="ball3"></div>
+          <div class="circle ball hidden" id="ball4"></div>
+        </div>
+        <div class="sbo-text">O</div>
+        <div class="circle-wrapper" id="out-display">
+          <div class="circle out hidden" id="out1"></div>
+          <div class="circle out hidden" id="out2"></div>
+          <div class="circle out hidden" id="out3"></div>
+        </div>
+      </div>
+      <div id="total-count">
+        <div class="total-state" id="total-throw">
+          선공팀 총 투구 수 :
+          <p id="top-team-total-throw"></p>
+          후공팀 총 투구 수 :
+          <p id="bottom-team-total-throw"></p>
+        </div>
+        <div class="total-state" id="total-strikeout">
+          선공팀 총 삼진 수 :
+          <p id="top-team-total-strikeout"></p>
+          후공팀 총 삼진 수 :
+          <p id="bottom-team-total-strikeout"></p>
+        </div>
+        <div class="total-state" id="total-hit">
+          선공팀 총 안타 수 :
+          <p id="top-team-total-hit"></p>
+          후공팀 총 안타 수 :
+          <p id="bottom-team-total-hit"></p>
+        </div>
+      </div>
+      <button class="hidden" id="inning-start-btn">이닝 시작!</button>
+      <button class="hidden" id="throw-ball-btn">Throw Ball!</button>
+      <button class="hidden" id="change-batter-btn">다음 타자!</button>
+    </section>
+  </body>
+</html>

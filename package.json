@@ -1,0 +1,12 @@
+{
+  "name": "baseball-scoreboard",
+  "version": "1.0.0",
+  "description": "This is for code-squad practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tg",
+  "license": "ISC",
+  "type": "module"
+}
